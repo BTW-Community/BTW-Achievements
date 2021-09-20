@@ -1,5 +1,6 @@
 # BTW-Achievements
 Adds BTW specific Achievements
+(made for BTW Community Edition)
 
 Requires Achievement-Core (https://github.com/BTW-Community/Achievements-Core-Addon)
 
