@@ -149,4 +149,45 @@ public class BAEventHandler {
             player.triggerAchievement(BAMod.netherPortal);
         }
 	}
+	
+	@EventListener(EventType.BREWED)
+	public void onBrewed(EntityPlayer player, ItemStack itemstack) {
+//		if (itemstack.itemID == Item.potion.itemID && itemstack.getItemDamage() == 8195) {
+//			player.triggerAchievement(BAMod.firePotion);
+//        }
+	}
+	
+	@EventListener(EventType.KILLED)
+	public void onKilled(EntityPlayer player, EntityLiving entity) {
+//		if (entity instanceof EntityPig) {
+//            player.triggerAchievement(ExampleAchievements.killPig);
+//        }
+	}
+	
+	@EventListener(EventType.ENTITY_INTERACT)
+	public void onEntityInteraction(EntityPlayer player, Entity entity) {
+//		if (entity instanceof EntityCreeper) {
+//			Item currentItem = player.getCurrentEquippedItem().getItem();
+//			if (currentItem instanceof ItemShears) {
+//				player.triggerAchievement(ExampleAchievements.neuterCreeper);				
+//			}
+//		}
+	}
+	
+	@EventListener(EventType.DEATH)
+	public void onDeath(EntityPlayer player, DamageSource damageSource) {
+//	  if (damageSource.getEntity() instanceof EntityCreeper) { 
+//	    player.triggerAchievement(AchievementsCore.awman);
+//	  }
+	}
+	
+	@EventListener(EventType.CONVERTED_BLOCK)
+	  public void onBlockConverted(EntityPlayer player, Block block) {
+	    if (block instanceof FCBlockLog) {
+			Item currentItem = player.getCurrentEquippedItem().getItem();
+			if (currentItem instanceof FCItemChiselIron) {
+				player.triggerAchievement(BAMod.workStump);				
+			}
+	    }
+	}
 }

@@ -161,24 +161,24 @@ public class BAMod extends FCAddOn {
 		
 		workStump = (new Achievement("workStump", shift + 17, 0, FCBetterThanWolves.fcBlockWorkStump, null)).registerAchievement(tabBTW);
 		
-		ironSword = (new Achievement("workStump", shift + 17, 0, Item.swordIron, null)).registerAchievement(tabBTW);
+		ironSword = (new Achievement("ironSword", shift + 18, 1, Item.swordIron, null)).registerAchievement(tabBTW);
 		
 		
 		System.out.println("BTW Tab: " + tabBTW.size() + " achievements");
 
 		// NetherTab
-		AchievementTab tabBTWNether = new BANetherTab("btwNether").setIcon(Block.lavaStill);
+		AchievementTab tabBTWNether = new BATabNether("btwNether").setIcon(Block.netherrack);
 
 		netherPortal = (new Achievement("netherPortal", 0, 0, Block.portal, null)).registerAchievement(tabBTWNether);
 
-		System.out.println(tabBTWNether.getName()+": " + tabBTWNether.size() + " achievements");
+		System.out.println("Nether Tab: " + tabBTWNether.size() + " achievements");
 		
 		// NetherTab
-		AchievementTab tabBTWEnd = new BAEndTab("btwEnd").setIcon(Block.endPortalFrame);
+		AchievementTab tabBTWEnd = new BATabEnd("btwEnd").setIcon(Block.whiteStone);
 
-		endPortal = (new Achievement("netherPortal", 0, 0, Block.portal, null)).registerAchievement(tabBTWEnd);
+		endPortal = (new Achievement("endPortal", 0, 0, Block.endPortalFrame, null)).registerAchievement(tabBTWEnd);
 		
-		System.out.println("BTW Tab: " + tabBTWEnd.size() + " achievements");
+		System.out.println("End Tab: " + tabBTWEnd.size() + " achievements");
 
 		EventDispatcher.register(new BAEventHandler());
 
