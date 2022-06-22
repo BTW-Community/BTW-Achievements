@@ -1,16 +1,316 @@
-
-language.name=English
-language.region=US
-language.code=en_US
-
 achievementtab.btw=BTW Achievements
 
-achievement.findShaft=§aA Sticky Situation
+achievement.findReeds=
+achievement.findReeds.desc=
+
+achievement.craftWicker=
+achievement.craftWicker.desc=
+
+achievement.craftBasket=
+achievement.craftBasket.desc=
+
+achievement.findBones=Get Boned!
+achievement.findBones.desc=Find some bones
+
+achievement.craftBoneClub=Let's go Clubbing!
+achievement.craftBoneClub.desc=
+
+achievement.craftBoneHook=
+achievement.craftBoneHook.desc=
+
+achievement.baitFishingRod=Fishy Business
+achievement.baitFishingRod.desc=Bait a fishing rod
+
+achievement.findShaft=A Sticky Situation
 achievement.findShaft.desc=Get a stick by punching a tree more
 
-achievementtab.tabBTWNether=Nether Achievements
+achievement.craftFirePlow=
+achievement.craftFirePlow.desc=
 
-achievement.netherPortal=§aWelkom in Nederland
-achievement.netherPortal.desc=Travel to the Nether
+achievement.craftCampfire=
+achievement.craftCampfire.desc=
 
-achievementtab.tabBTWEnd=End Achievements
+achievement.cookMeat=
+achievement.cookMeat.desc=
+
+achievement.craftPointyStick=A Pointy Stick!
+achievement.craftPointyStick.desc=Sharpen your shaft
+
+achievement.craftKnittingNeedles=
+achievement.craftKnittingNeedles.desc=
+
+achievement.craftWoolArmor=
+achievement.craftWoolArmor.desc=
+
+achievement.craftSharpStone=Stone Age
+achievement.craftSharpStone.desc=
+
+achievement.findString=
+achievement.findString.desc=
+
+achievement.craftBowDrill= 
+achievement.craftBowDrill.desc=
+ 
+achievement.craftStoneAxe=
+achievement.craftStoneAxe.desc=
+
+achievement.findWood=Getting Wood
+achievement.findWood.desc=Use an axe to chop down a tree
+ 
+achievement.craftStoneShovel=
+achievement.craftStoneShovel.desc=
+
+achievement.dryBricks=
+achievement.dryBricks.desc=
+
+achievement.findIronChunk=
+achievement.findIronChunk.desc=
+ 
+achievement.craftOven=Hot Topic
+achievement.craftOven.desc=Construct a Brick Oven out of Brick
+
+achievement.cookIron=Acquire Hardware
+achievement.cookIron.desc=Smelt an iron chunk
+
+achievement.craftIronChisel=
+achievement.craftIronChisel.desc=
+
+achievement.findStoneBrick=
+achievement.findStoneBrick.desc=
+ 
+achievement.craftWorkbench=Benchmarking
+achievement.craftWorkbench.desc=Create a Workbench by converting a stump
+
+achievement.craftStonePick=Time to Mine!
+achievement.craftStonePick.desc=Use the workbench to make a pickaxe
+ 
+achievement.craftIronIngot=
+achievement.craftIronIngot.desc=
+
+achievement.craftIronPick=Isn't It Iron Pick
+achievement.craftIronPick.desc=Construct a better pickaxe
+
+achievement.craftIronSword=
+achievement.craftIronSword.desc=
+
+achievement.craftIronHoe=Time to Farm!
+achievement.craftIronHoe.desc=Use iron and shafts to make a hoe
+
+achievement.craftShears=
+achievement.craftShears.desc=
+
+achievement.craftCauldron=
+achievement.craftCauldron.desc=
+
+achievement.craftIronAxe=
+achievement.craftIronAxe.desc=
+
+achievement.craftIronArmor=Suit Up
+achievement.craftIronArmor.desc=Protect yourself with a piece of iron armor
+
+achievement.findDung=
+achievement.findDung.desc=
+
+achievement.craftScouredLeather=
+achievement.craftScouredLeather.desc=
+
+achievement.craftTannedLeather=
+achievement.craftTannedLeather.desc=
+
+achievement.craftSaw=
+achievement.craftSaw.desc=
+
+achievement.craftBellows=
+achievement.craftBellows.desc=
+
+achievement.craftTurntable=
+achievement.craftTurntable.desc=
+
+achievement.craftPottery=
+achievement.craftPottery.desc=
+
+achievement.craftHopper=
+achievement.craftHopper.desc=
+ 
+achievement.craftPlanks=
+achievement.craftPlanks.desc=
+
+achievement.craftHamper=
+achievement.craftHamper.desc=
+
+achievement.craftGear=
+achievement.craftGear.desc=
+
+achievement.craftHandCrank=
+achievement.craftHandCrank.desc=
+
+achievement.craftMillstone=
+achievement.craftMillstone.desc=
+ 
+achievement.findHempSeeds=
+achievement.findHempSeeds.desc=
+
+achievement.harvestHemp=
+achievement.harvestHemp.desc=
+
+achievement.craftHempFibers=
+achievement.craftHempFibers.desc=
+
+achievement.craftAxle=
+achievement.craftAxle.desc=
+
+achievement.craftGearBox=
+achievement.craftGearBox.desc=
+
+achievement.craftFabric=
+achievement.craftFabric.desc=
+
+achievement.craftWindmill=You spin my head right round
+achievement.craftWindmill.desc=
+
+achievement.craftPadding=
+achievement.craftPadding.desc=
+
+achievement.findDiamonds=DIAMONDS!
+achievement.findDiamonds.desc=Acquire diamonds with your iron tools
+
+achievement.craftDiamondIngot=
+achievement.craftDiamondIngot.desc=
+
+achievement.findCreeperOysters=
+achievement.findCreeperOysters.desc=
+ 
+achievement.craftDiamondArmor=Cover Me with Diamonds
+achievement.craftDiamondArmor.desc=Diamond armor saves lives
+
+achievement.craftDiamondPick=
+achievement.craftDiamondPick.desc=
+
+achievement.findObsidian=Ice Bucket Challenge
+achievement.findObsidian.desc=Obtain a block of obsidian
+
+achievement.travelNether=Welkom in Nederland
+achievement.travelNether.desc=Travel to the Nether
+
+achievement.findDormantForge=
+achievement.findDormantForge.desc=
+
+achievement.findBlazeRod=Into Fire
+achievement.findBlazeRod.desc=Relieve a Blaze of its rod
+
+achievement.craftGroundNetherrack=
+achievement.craftGroundNetherrack.desc=Grind up some Netherrack
+
+achievement.craftHibachi=
+achievement.craftHibachi.desc=
+
+achievement.cookUrn=
+achievement.cookUrn.desc=
+
+achievement.cookCrucible=
+achievement.cookCrucible.desc=
+
+achievement.craftWaterwheel=
+achievement.craftWaterwheel.desc=
+
+achievement.craftSoulUrn=
+achievement.craftSoulUrn.desc=Capture Souls in an Urn
+
+achievement.cureZombieVillager=Zombie Doctor
+achievement.cureZombieVillager.desc=Cure a Zombie Villager
+
+achievement.tradeFarmerLvl2=Farmer Level 2
+achievement.tradeFarmerLvl2.desc=Sell an Iron Hoe
+
+achievement.tradeFarmerLvl3=Farmer Level 3
+achievement.tradeFarmerLvl3.desc=Sell a Millstone
+
+achievement.tradeFarmerLvl4=Farmer Level 4
+achievement.tradeFarmerLvl4.desc=Sell a Water Wheel
+
+achievement.tradeFarmerLvl5=Farmer Level 5
+achievement.tradeFarmerLvl5.desc=Sell some Planters
+
+achievement.tradeButcherLvl2=
+achievement.tradeButcherLvl2.desc=Sell a Cauldron
+
+achievement.tradeButcherLvl3=
+achievement.tradeButcherLvl3.desc=Sell a Saw
+
+achievement.tradeButcherLvl4=
+achievement.tradeButcherLvl4.desc=Sell a Breeding Harness
+
+achievement.tradeButcherLvl5=
+achievement.tradeButcherLvl5.desc=Sell a Bloody Chopping Block
+
+achievement.tradeBlacksmithLvl2=
+achievement.tradeBlacksmithLvl2.desc=Sell a Hibachi
+
+achievement.tradeBlacksmithLvl3=
+achievement.tradeBlacksmithLvl3.desc=Sell a Bellow
+
+achievement.tradeBlacksmithLvl4=
+achievement.tradeBlacksmithLvl4.desc=Sell a Crucible
+
+achievement.tradeBlacksmithLvl5=
+achievement.tradeBlacksmithLvl5.desc=Sell some Soulforged Steel
+
+achievement.tradePriestLvl2=
+achievement.tradePriestLvl2.desc=Sell an Ancient Manuscript
+
+achievement.tradePriestLvl3=
+achievement.tradePriestLvl3.desc=Sell a Brewing Stand
+
+achievement.tradePriestLvl4=
+achievement.tradePriestLvl4.desc=Sell a Block Dispenser
+
+achievement.tradePriestLvl5=
+achievement.tradePriestLvl5.desc=Sell some Ender Spectacles
+ 
+achievement.tradeLibrarianLvl2=
+achievement.tradeLibrarianLvl2.desc=Sell an Enchanting Table
+
+achievement.tradeLibrarianLvl3=
+achievement.tradeLibrarianLvl3.desc=Sell a Vessel of the Dragon
+
+achievement.tradeLibrarianLvl4=
+achievement.tradeLibrarianLvl4.desc=Sell a Runed Skull
+
+achievement.tradeLibrarianLvl5= 
+achievement.tradeLibrarianLvl5.desc=Sell an Infernal Enchanter
+
+achievement.craftEye=The all seeing Eye
+achievement.craftEye.desc=Trade Ender Pearls for Eyes of Ender
+
+achievement.travelEnd=The End?
+achievement.travelEnd.desc=Or the beginning?
+
+achievement.killDragon=Free the End
+achievement.killDragon.desc=Defeat the Ender Dragon
+
+achievement.craftSteelIngot=
+achievement.craftSteelIngot.desc=
+
+achievement.craftSteelTools=
+achievement.craftSteelTools.desc=
+
+achievement.craftSteelArmor=
+achievement.craftSteelArmor.desc=
+
+achievement.craftInfernalEnchater=
+achievement.craftInfernalEnchater.desc=
+
+achievement.craftInfusedSkull=
+achievement.craftInfusedSkull.desc=
+
+achievement.killWither=The Beginning.
+achievement.killWither.desc=Kill the Wither
+
+achievement.findNetherstar=
+achievement.findNetherstar.desc=
+
+achievement.craftForge=
+achievement.craftForge.desc=
+
+achievement.craftBlockDispenser=
+achievement.craftBlockDispenser.desc=

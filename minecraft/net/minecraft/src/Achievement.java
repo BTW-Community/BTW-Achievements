@@ -6,13 +6,8 @@ public class Achievement extends StatBase
 {
 	static {
 		AchievementsCore.getInstance();
+		BetterAchievementsMod.getInstance();
 	}
-	
-	//BA
-	static {
-		BAMod.getInstance();
-	}
-	//BA - end
 	
     /**
      * Is the column (related to center of achievement gui, in 24 pixels unit) that the achievement will be displayed.
@@ -25,16 +20,41 @@ public class Achievement extends StatBase
     public final int displayRow;
 
     /**
-     * Holds the parent achievement, that must be taken before this achievement is avaiable.
+     * Holds the parent achievements, that must be taken before this achievement is available.
      */
     public final Achievement parentAchievement;
+    public final Achievement[] parentAchievements;
     
-    //BA
     /**
-     * Holds the second parent achievement, that must be taken in addition before this achievement is avaiable.
+     * Holds the tab this achievement is in.
      */
-    public final Achievement secondParentAchievement;
-    //BA - end
+    public AchievementTab tab;
+    
+    /**
+     * Determines if this achievement should be shown to the player when locked.
+     */
+    public boolean isHidden = false;
+    
+    /**
+     * The format code to be used when the achievement is announce to chat.
+     * See https://minecraft.fandom.com/wiki/Formatting_codes
+     */
+    public String formatCode = "§a";
+    
+    /**
+     * The name of the file containing the achievement's frame.
+     */
+    public String frameSet = "default";
+    
+    /**
+     * The left coordinate of the frame in frameSet.
+     */
+    public int u = 0;
+    
+    /**
+     * The top coordinate of the frame in frameSet.
+     */
+    public int v = 0;
 
     /**
      * Holds the description of the achievement, ready to be formatted and/or displayed.
@@ -58,59 +78,36 @@ public class Achievement extends StatBase
      */
     private boolean isSpecial;
     
-    public Achievement(String name, int displayColumn, int displayRow, Item item, Achievement parentAchievement)
+    public Achievement(String name, int displayColumn, int displayRow, Item item, Achievement... parentAchievements)
     {
-        this(0, name, displayColumn, displayRow, new ItemStack(item), parentAchievement, null);
+        this(0, name, displayColumn, displayRow, new ItemStack(item), parentAchievements);
     }
 
-    public Achievement(String name, int displayColumn, int displayRow, Block block, Achievement parentAchievement)
+    public Achievement(String name, int displayColumn, int displayRow, Block block, Achievement... parentAchievements)
     {
-        this(0, name, displayColumn, displayRow, new ItemStack(block), parentAchievement, null);
+        this(0, name, displayColumn, displayRow, new ItemStack(block), parentAchievements);
     }
 
-    public Achievement(int par1, String par2Str, int par3, int par4, Item par5Item, Achievement par6Achievement)
+    public Achievement(int par1, String par2Str, int par3, int par4, Item par5Item, Achievement... parentAchievements)
     {
-        this(par1, par2Str, par3, par4, new ItemStack(par5Item), par6Achievement, null);
+        this(par1, par2Str, par3, par4, new ItemStack(par5Item), parentAchievements);
     }
 
-    public Achievement(int par1, String par2Str, int par3, int par4, Block par5Block, Achievement par6Achievement)
+    public Achievement(int par1, String par2Str, int par3, int par4, Block par5Block, Achievement... parentAchievements)
     {
-        this(par1, par2Str, par3, par4, new ItemStack(par5Block), par6Achievement, null);
-    }
-    
-    //Second Parent
-    public Achievement(String name, int displayColumn, int displayRow, Item item, Achievement parentAchievement, Achievement secondParentAchievement)
-    {
-        this(0, name, displayColumn, displayRow, new ItemStack(item), parentAchievement, secondParentAchievement);
+        this(par1, par2Str, par3, par4, new ItemStack(par5Block), parentAchievements);
     }
 
-    public Achievement(String name, int displayColumn, int displayRow, Block block, Achievement parentAchievement, Achievement secondParentAchievement)
+    public Achievement(int id, String name, int displayColumn, int displayRow, ItemStack theItemStack, Achievement... parentAchievements)
     {
-        this(0, name, displayColumn, displayRow, new ItemStack(block), parentAchievement, secondParentAchievement);
-    }
-
-    public Achievement(int par1, String par2Str, int par3, int par4, Item par5Item, Achievement par6Achievement, Achievement secondParentAchievement)
-    {
-        this(par1, par2Str, par3, par4, new ItemStack(par5Item), par6Achievement, secondParentAchievement);
-    }
-
-    public Achievement(int par1, String par2Str, int par3, int par4, Block par5Block, Achievement par6Achievement, Achievement secondParentAchievement)
-    {
-        this(par1, par2Str, par3, par4, new ItemStack(par5Block), par6Achievement, secondParentAchievement);
-    }
-    
-    
-    //BA added second Parent
-    public Achievement(int id, String name, int displayColumn, int displayRow, ItemStack theItemStack, Achievement parentAchievement, Achievement secondParentAchievement)
-    {
-        super(5242880 + AchievementTabList.counter++, "achievement." + name);
+        super(AchievementTabList.counter++, "achievement." + name);
         this.theItemStack = theItemStack;
         this.achievementDescription = "achievement." + name + ".desc";
         this.displayColumn = displayColumn;
         this.displayRow = displayRow;
 
-        this.parentAchievement = parentAchievement;
-        this.secondParentAchievement = secondParentAchievement; //BA edit
+        this.parentAchievements = parentAchievements;
+        this.parentAchievement = parentAchievements[0];
     }
 
     /**
@@ -124,12 +121,54 @@ public class Achievement extends StatBase
     }
 
     /**
-     * Special achievements have a 'spiked' (on normal texture pack) frame, special achievements are the hardest ones to
-     * achieve.
+     * Special achievements have a 'spiked' (on normal texture pack) frame,
+     * as well as having a dark purple announcement color.
+     * Special achievements are the hardest ones to achieve.
      */
     public Achievement setSpecial()
     {
         this.isSpecial = true;
+        this.formatCode = "§5";
+        this.u = 26;
+        return this;
+    }
+    
+    /**
+     * Hidden achievements are not revealed until unlocked.
+     */
+    public Achievement setHidden()
+    {
+        this.isHidden = true;
+        return this;
+    }
+    
+    /**
+     * The format code to be used when the achievement is announce to chat.
+     * This is set to �a (green) by default, and $5 (dark_purple) for special achievements.
+     * See https://minecraft.fandom.com/wiki/Formatting_codes
+     */
+    public Achievement setFormatCode(String formatCode)
+    {
+        this.formatCode = formatCode;
+        return this;
+    }
+    
+    /**
+     * The name of the file containing the achievement's frame.
+     */
+    public Achievement setFrameSet(String frameSetName)
+    {
+        this.frameSet = frameSetName;
+        return this;
+    }
+    
+    /**
+     * The name of the file containing the achievement's frame.
+     */
+    public Achievement setFrameUV(int u, int v)
+    {
+        this.u = u;
+        this.v = v;
         return this;
     }
     
@@ -146,32 +185,33 @@ public class Achievement extends StatBase
     /**
      * Registers an achievement to a custom tab.
      * 
-     * @param tab is the custom tab to register to
+     * @param achievementtab is the custom tab to register to
      * @return this
      */
-    public Achievement registerAchievement(AchievementTab tab)
+    public Achievement registerAchievement(AchievementTab achievementtab)
     {
         super.registerStat();
-        tab.add(this);
+        achievementtab.add(this);
+        this.tab = achievementtab;
         
-        if (this.displayColumn < tab.minDisplayColumn)
+        if (this.displayColumn < achievementtab.minDisplayColumn)
         {
-        	tab.minDisplayColumn = this.displayColumn;
+        	achievementtab.minDisplayColumn = this.displayColumn;
         }
 
-        if (this.displayRow < tab.minDisplayRow)
+        if (this.displayRow < achievementtab.minDisplayRow)
         {
-        	tab.minDisplayRow = this.displayRow;
+        	achievementtab.minDisplayRow = this.displayRow;
         }
 
-        if (this.displayColumn > tab.maxDisplayColumn)
+        if (this.displayColumn > achievementtab.maxDisplayColumn)
         {
-        	tab.maxDisplayColumn = this.displayColumn;
+        	achievementtab.maxDisplayColumn = this.displayColumn;
         }
 
-        if (this.displayRow > tab.maxDisplayRow)
+        if (this.displayRow > achievementtab.maxDisplayRow)
         {
-        	tab.maxDisplayRow = this.displayRow;
+        	achievementtab.maxDisplayRow = this.displayRow;
         }
         return this;
     }
