@@ -320,7 +320,7 @@ achievement.craftBlockDispenser.desc=
 
 achievementtab.fun=Secret Achievements
 
-achievement.eatOysters=Spicy Snack
+achievement.eatOysters=Spicy Snack / Whatever it is, the taste is explosive / Better than Caviar
 achievement.eatOysters.name=Eat some Creeper Oysters
 
 achievement.powerCake=The Lie
@@ -328,4 +328,10 @@ achievement.powerCake.desc=Power a cake
 
 achievement.cleanFarmer=Don´t drop it!
 achievement.cleanFarmer.desc=Sell soap to a dirty Farmer to clean him up
+
+# Possible secret achiements:
+# Activate a tier 4 diamond / emerald / soulforge beacon. soulforge could also be the final achievement in main line
+# get a rare sheep mutation proc
+# toss the milk
+
 
