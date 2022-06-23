@@ -176,12 +176,82 @@ public class BAMEventHandler {
             player.triggerAchievement(BAMAchievements.craftHopper);
             return;
         }
-		
-
+		else if (itemstack.itemID == FCBetterThanWolves.fcBlockAxle.blockID) {
+            player.triggerAchievement(BAMAchievements.craftAxle);
+            return;
+        }
+		else if (itemstack.itemID == FCBetterThanWolves.fcBlockGearBox.blockID) {
+            player.triggerAchievement(BAMAchievements.craftGearBox);
+            return;
+        }
+		else if (itemstack.itemID == FCBetterThanWolves.fcItemHempCloth.itemID) {
+            player.triggerAchievement(BAMAchievements.craftFabric);
+            return;
+        }
+		else if (itemstack.itemID == FCBetterThanWolves.fcItemWindMill.itemID) {
+            player.triggerAchievement(BAMAchievements.craftWindmill);
+            return;
+        }
+		else if (itemstack.itemID == FCBetterThanWolves.fcItemPadding.itemID) {
+            player.triggerAchievement(BAMAchievements.craftPadding);
+            return;
+        }
+		else if (itemstack.itemID ==  Item.bootsDiamond.itemID ||
+				itemstack.itemID ==  Item.legsDiamond.itemID ||
+				itemstack.itemID ==  Item.plateDiamond.itemID ||
+				itemstack.itemID ==  Item.helmetDiamond.itemID) {
+            player.triggerAchievement(BAMAchievements.craftDiamondArmor);
+            return;
+        }
+		else if (itemstack.itemID == Item.pickaxeDiamond.itemID) {
+            player.triggerAchievement(BAMAchievements.craftDiamondPick);
+            return;
+        }
+		else if (itemstack.itemID == FCBetterThanWolves.fcBBQ.blockID) {
+            player.triggerAchievement(BAMAchievements.craftHibachi);
+            return;
+        }
+		else if (itemstack.itemID == FCBetterThanWolves.fcItemWaterWheel.itemID) {
+            player.triggerAchievement(BAMAchievements.craftWaterwheel);
+            return;
+        }
+		else if (itemstack.itemID == Item.skull.itemID &&
+				itemstack.getItemDamage() == 5)
+		{
+			player.triggerAchievement(BAMAchievements.craftInfusedSkull);
+			return;
+		}
+		else if (itemstack.itemID == Block.beacon.blockID) {
+            player.triggerAchievement(BAMAchievements.craftBeacon);
+            return;
+        }
+		else if (itemstack.itemID == FCBetterThanWolves.fcAnvil.blockID) {
+            player.triggerAchievement(BAMAchievements.craftForge);
+            return;
+        }
+		else if (itemstack.itemID ==  FCBetterThanWolves.fcItemRefinedPickAxe.itemID ||
+				itemstack.itemID ==  FCBetterThanWolves.fcItemRefinedAxe.itemID ||
+				itemstack.itemID ==  FCBetterThanWolves.fcItemRefinedHoe.itemID ||
+				itemstack.itemID ==  FCBetterThanWolves.fcItemRefinedShovel.itemID) {
+            player.triggerAchievement(BAMAchievements.craftSteelArmor);
+            return;
+        }
+		else if (itemstack.itemID ==  FCBetterThanWolves.fcItemPlateBoots.itemID ||
+				itemstack.itemID ==  FCBetterThanWolves.fcItemPlateLeggings.itemID ||
+				itemstack.itemID ==  FCBetterThanWolves.fcItemPlateBreastPlate.itemID ||
+				itemstack.itemID ==  FCBetterThanWolves.fcItemPlateHelm.itemID) {
+            player.triggerAchievement(BAMAchievements.craftSteelArmor);
+            return;
+        }
+		else if (itemstack.itemID == FCBetterThanWolves.fcInfernalEnchanter.blockID) {
+            player.triggerAchievement(BAMAchievements.craftInfernalEnchater);
+            return;
+        }
 	}
 	
 	@EventListener(EventType.COOKED)
-	public void onCooked(EntityPlayer player, ItemStack itemstack) {
+	public void onCooked(EntityPlayer player, ItemStack itemstack)
+	{
 		if (itemstack.itemID == Item.beefCooked.itemID) {
             player.triggerAchievement(BAMAchievements.cookMeat);
             return;
@@ -200,7 +270,6 @@ public class BAMEventHandler {
 	@EventListener(EventType.PICKUP)
 	public void onPickup(EntityPlayer player, ItemStack itemstack)
 	{
-		
 		if (itemstack.itemID == Item.reed.itemID) {
             player.triggerAchievement(BAMAchievements.findReeds);
             return;
@@ -269,17 +338,71 @@ public class BAMEventHandler {
             player.triggerAchievement(BAMAchievements.craftHempFibers);
             return;
         }
-
+		else if (itemstack.itemID == Block.obsidian.blockID) {
+            player.triggerAchievement(BAMAchievements.findObsidian);
+            return;
+        }
+		else if (itemstack.itemID == FCBetterThanWolves.fcItemGroundNetherrack.itemID) {
+            player.triggerAchievement(BAMAchievements.craftGroundNetherrack);
+            return;
+        }
+		else if (itemstack.itemID == FCBetterThanWolves.fcBlockSoulforgeDormant.blockID) {
+            player.triggerAchievement(BAMAchievements.findDormantForge);
+            return;
+        }
+		else if (itemstack.itemID == Item.blazeRod.itemID) {
+            player.triggerAchievement(BAMAchievements.findBlazeRod);
+            return;
+        }
+		else if (itemstack.itemID == FCBetterThanWolves.fcItemUrn.itemID) {
+            player.triggerAchievement(BAMAchievements.cookUrn);
+            return;
+        }
+		else if (itemstack.itemID == FCBetterThanWolves.fcCrucible.blockID) {
+            player.triggerAchievement(BAMAchievements.cookCrucible);
+            return;
+        }
+		else if (itemstack.itemID == FCBetterThanWolves.fcItemSoulUrn.itemID) {
+            player.triggerAchievement(BAMAchievements.craftSoulUrn);
+            return;
+        }
+		else if (itemstack.itemID == Item.netherStar.itemID) {
+            player.triggerAchievement(BAMAchievements.findNetherstar);
+            return;
+        }
+		else if (itemstack.itemID == FCBetterThanWolves.fcItemSteel.itemID) {
+            player.triggerAchievement(BAMAchievements.craftSteelIngot);
+            return;
+        }
 	}
 	
 	@EventListener(EventType.KILLED)
-	public void onKilled(EntityPlayer player, EntityLiving entity) {
-
+	public void onKilled(EntityPlayer player, EntityLiving entity)
+	{
+		if (entity instanceof FCEntityWither)
+		{
+			player.triggerAchievement(BAMAchievements.killWither);
+            return;
+		}
+		else if (entity instanceof EntityDragon)
+		{
+			player.triggerAchievement(BAMAchievements.killDragon);
+            return;
+		}
 	}
 	
 	@EventListener(EventType.PORTAL)
 	public void onTravelledDimension(EntityPlayer player, int dimension) {
-
+		if ( dimension == -1)
+		{
+			player.triggerAchievement(BAMAchievements.travelNether);
+            return;
+		}
+		else if ( dimension == 1)
+		{
+			player.triggerAchievement(BAMAchievements.travelEnd);
+            return;
+		}
 	}
 	
 	@EventListener(EventType.ENTITY_INTERACT)
@@ -289,8 +412,7 @@ public class BAMEventHandler {
 	
 	@EventListener(EventType.CONVERTED_BLOCK)
 	public void onEntityInteraction(EntityPlayer player, Block block) {
-		//TODO doesn't work
-		if (block.blockID == FCBetterThanWolves.fcBlockWorkStump.blockID) {
+		if (block.blockID == Block.wood.blockID) {
             player.triggerAchievement(BAMAchievements.craftWorkbench);
             return;
         }
@@ -298,12 +420,96 @@ public class BAMEventHandler {
 	
 	@EventListener(EventType.DEATH)
 	public void onDeath(EntityPlayer player, DamageSource damageSource) {
-
+		
 	}
 	
 	@EventListener(EventType.TRADED)
-	public void onDeath(EntityPlayer player, MerchantRecipe recipe) {
-
+	public void onTraded(EntityPlayer player, MerchantRecipe recipe) {
+		
+		if (recipe.getItemToBuy().itemID == FCBetterThanWolves.fcItemSoap.itemID)
+		{
+			player.triggerAchievement(BAMAchievements.cleanFarmer);
+			return;
+		}
+		else if (recipe.getItemToBuy().itemID == Item.hoeIron.itemID )
+		{
+			player.triggerAchievement(BAMAchievements.tradeFarmerLvl2);
+			return;
+		}
+		else if (recipe.getItemToBuy().itemID == FCBetterThanWolves.fcMillStone.blockID )
+		{
+			player.triggerAchievement(BAMAchievements.tradeFarmerLvl3);
+			return;
+		}
+		else if (recipe.getItemToBuy().itemID == FCBetterThanWolves.fcItemWaterWheel.itemID )
+		{
+			player.triggerAchievement(BAMAchievements.tradeFarmerLvl4);
+			return;
+		}
+		else if (recipe.getItemToBuy().itemID == FCBetterThanWolves.fcBlockPlanterSoil.blockID )
+		{
+			player.triggerAchievement(BAMAchievements.tradeFarmerLvl5);
+			return;
+		}
+		else if (recipe.getItemToBuy().itemID == FCBetterThanWolves.fcCauldron.blockID )
+		{
+			player.triggerAchievement(BAMAchievements.tradeButcherLvl2);
+			return;
+		}
+		else if (recipe.getItemToBuy().itemID == FCBetterThanWolves.fcSaw.blockID )
+		{
+			player.triggerAchievement(BAMAchievements.tradeButcherLvl3);
+			return;
+		}
+		else if (recipe.getItemToBuy().itemID == FCBetterThanWolves.fcItemBreedingHarness.itemID )
+		{
+			player.triggerAchievement(BAMAchievements.tradeButcherLvl4);
+			return;
+		}
+		else if (recipe.getItemToBuy().itemID == FCBetterThanWolves.fcAestheticOpaque.blockID &&
+				recipe.getItemToBuy().getItemDamage() ==  FCBlockAestheticOpaque.m_iSubtypeChoppingBlockDirty)
+		{
+			player.triggerAchievement(BAMAchievements.tradeButcherLvl5);
+			return;
+		}
+		else if (recipe.getItemToSell().itemID == Item.skull.itemID &&
+				recipe.getItemToSell().getItemDamage() == 5)
+		{
+			player.triggerAchievement(BAMAchievements.craftInfusedSkull);
+			return;
+		}
+		else if (recipe.getItemToSell().itemID == Item.eyeOfEnder.itemID )
+		{
+			player.triggerAchievement(BAMAchievements.craftEye);
+			return;
+		}
+	}
+	
+	@EventListener(EventType.EATEN)
+	public void onEaten(EntityPlayer player, ItemStack stack)
+	{		
+		if (stack.itemID == FCBetterThanWolves.fcItemCreeperOysters.itemID)
+		{
+			player.triggerAchievement(BAMAchievements.eatOysters);
+			return;
+		}
+		else if (stack.itemID == Item.bucketMilk.itemID)
+		{
+			player.triggerAchievement(BAMAchievements.milkBucket);
+			return;
+		}
+		else if (stack.itemID == FCBetterThanWolves.fcItemCookedMysteryMeat.itemID ||
+				stack.itemID == FCBetterThanWolves.fcItemRawMysteryMeat.itemID)
+		{
+			player.triggerAchievement(BAMAchievements.eatMysteryMeat);
+			return;
+		}
+	}
+	
+	@EventListener(EventType.POWERCAKE)
+	public void onCakePowered(EntityPlayer player, FCBlockCake cake) {
+		player.triggerAchievement(BAMAchievements.powerCake);
+		return;
 	}
 	
 }

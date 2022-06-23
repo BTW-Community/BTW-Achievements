@@ -1,7 +1,6 @@
 package net.minecraft.src;
 
 public class BAMAchievements {
-
 	
 	/* List of custom achievements */
 	public static Achievement findReeds;
@@ -104,15 +103,20 @@ public class BAMAchievements {
 	public static Achievement tradeFarmerLvl4;
 	public static Achievement tradeFarmerLvl5;
 	
-	public static Achievement tradeClericLvl2;
-	public static Achievement tradeClericLvl3;
-	public static Achievement tradeClericLvl4;
-	public static Achievement tradeClericLvl5;
-	
 	public static Achievement tradeButcherLvl2;
 	public static Achievement tradeButcherLvl3;
 	public static Achievement tradeButcherLvl4;
 	public static Achievement tradeButcherLvl5;
+	
+	public static Achievement tradeBlacksmithLvl2;
+	public static Achievement tradeBlacksmithLvl3;
+	public static Achievement tradeBlacksmithLvl4;
+	public static Achievement tradeBlacksmithLvl5;
+	
+	public static Achievement tradePriestLvl2;
+	public static Achievement tradePriestLvl3;
+	public static Achievement tradePriestLvl4;
+	public static Achievement tradePriestLvl5;
 	
 	public static Achievement tradeLibrarianLvl2;
 	public static Achievement tradeLibrarianLvl3;
@@ -130,8 +134,17 @@ public class BAMAchievements {
 	public static Achievement craftInfusedSkull;
 	public static Achievement killWither;
 	public static Achievement findNetherstar;
+	public static Achievement craftBeacon;
 	public static Achievement craftForge;
 	public static Achievement craftBlockDispenser;
+	
+	public static Achievement steelBeacon;
+	
+	public static Achievement eatOysters;
+	public static Achievement powerCake;
+	public static Achievement cleanFarmer;
+	public static Achievement milkBucket;
+	public static Achievement eatMysteryMeat;
 	
 	
 	public static void initialize() {
@@ -142,11 +155,13 @@ public class BAMAchievements {
 		 * achievement to null works completely fine so there shouldn't be a reason to
 		 * use it anyway.
 		 */
-
-		AchievementTab tabBTW = new AchievementTab("btw").setIcon(FCBetterThanWolves.fcCompanionCube);
 		
-		/* Reed branch */
+		/* Better Than Wolves - Tech Tree */
+		
+		AchievementTab tabBTW = new AchievementTab("btw").setIcon(FCBetterThanWolves.fcCompanionCube);
 
+		/* Reed branch */
+		
 		findReeds = (new Achievement("findReeds", 0, -3, Item.reed,  null, null))
 				.registerAchievement(tabBTW);
 		
@@ -286,7 +301,7 @@ public class BAMAchievements {
 		craftMillstone = (new Achievement("craftMillstone", 20, 0, FCBetterThanWolves.fcMillStone, craftGear))
 				.registerAchievement(tabBTW);
 		
-		craftHandCrank = (new Achievement("craftHandCrank", 19, -1, FCBetterThanWolves.fcHandCrank, craftGear))
+		craftHandCrank = (new Achievement("craftHandCrank", 19, 1, FCBetterThanWolves.fcHandCrank, craftGear))
 				.registerAchievement(tabBTW);
 		
 		craftScouredLeather = (new Achievement("craftScouredLeather", 20, -1, FCBetterThanWolves.fcItemScouredLeather, craftMillstone))
@@ -383,84 +398,138 @@ public class BAMAchievements {
 				.registerAchievement(tabBTW);
 		
 		tradeFarmerLvl5 = (new Achievement("tradeFarmerLvl5", 31, -1, FCBetterThanWolves.fcBlockPlanterSoil, tradeFarmerLvl4))
+				.registerAchievement(tabBTW)
+				.setSpecial();	
+		
+		
+		tradeBlacksmithLvl2 = (new Achievement("tradeBlacksmithLvl2", 28, 0, FCBetterThanWolves.fcBBQ, cureZombieVillager))
 				.registerAchievement(tabBTW);
 		
-		
-		tradeClericLvl2 = (new Achievement("tradeClericLvl2", 28, 0, Item.book, cureZombieVillager))
+		tradeBlacksmithLvl3 = (new Achievement("tradeBlacksmithLvl3", 29, 0, FCBetterThanWolves.fcBellows, tradeBlacksmithLvl2))
 				.registerAchievement(tabBTW);
 		
-		tradeClericLvl3 = (new Achievement("tradeClericLvl3", 29, 0, Item.brewingStand, tradeClericLvl2))
+		tradeBlacksmithLvl4 = (new Achievement("tradeBlacksmithLvl4", 30, 0, FCBetterThanWolves.fcCrucible, tradeBlacksmithLvl3))
 				.registerAchievement(tabBTW);
 		
-		tradeClericLvl4 = (new Achievement("tradeClericLvl4", 30, 0, FCBetterThanWolves.fcBlockDispenser, tradeClericLvl3))
+		tradeBlacksmithLvl5 = (new Achievement("tradeBlacksmithLvl5", 31, 0, FCBetterThanWolves.fcItemSteel, tradeBlacksmithLvl4))
+				.registerAchievement(tabBTW)
+				.setSpecial();	
+		
+		
+		tradePriestLvl2 = (new Achievement("tradePriestLvl2", 28, 1, Item.book, cureZombieVillager))
 				.registerAchievement(tabBTW);
 		
-		tradeClericLvl5 = (new Achievement("tradeClericLvl5", 31, 0, FCBetterThanWolves.fcItemEnderSpectacles, tradeClericLvl4))
+		tradePriestLvl3 = (new Achievement("tradePriestLvl3", 29, 1, Item.brewingStand, tradePriestLvl2))
 				.registerAchievement(tabBTW);
 		
-		
-		tradeButcherLvl2 = (new Achievement("tradeButcherLvl2", 28, 1, FCBetterThanWolves.fcCauldron, cureZombieVillager))
+		tradePriestLvl4 = (new Achievement("tradePriestLvl4", 30, 1, FCBetterThanWolves.fcBlockDispenser, tradePriestLvl3))
 				.registerAchievement(tabBTW);
 		
-		tradeButcherLvl3 = (new Achievement("tradeButcherLvl3", 29, 1, FCBetterThanWolves.fcSaw, tradeButcherLvl2))
+		tradePriestLvl5 = (new Achievement("tradePriestLvl5", 31, 1, FCBetterThanWolves.fcItemEnderSpectacles, tradePriestLvl4))
+				.registerAchievement(tabBTW)
+				.setSpecial();	
+		
+		
+		tradeButcherLvl2 = (new Achievement("tradeButcherLvl2", 28, 2, FCBetterThanWolves.fcCauldron, cureZombieVillager))
 				.registerAchievement(tabBTW);
 		
-		tradeButcherLvl4 = (new Achievement("tradeButcherLvl4", 30, 1, FCBetterThanWolves.fcItemBreedingHarness, tradeButcherLvl3))
+		tradeButcherLvl3 = (new Achievement("tradeButcherLvl3", 29, 2, FCBetterThanWolves.fcSaw, tradeButcherLvl2))
 				.registerAchievement(tabBTW);
 		
-		//TODO: fix display block
-		tradeButcherLvl5 = (new Achievement("tradeButcherLvl5", 31, 1, FCBetterThanWolves.fcBlockStoneBrickLoose, tradeButcherLvl4))
+		tradeButcherLvl4 = (new Achievement("tradeButcherLvl4", 30, 2, FCBetterThanWolves.fcItemBreedingHarness, tradeButcherLvl3))
 				.registerAchievement(tabBTW);
 		
-		
-		tradeLibrarianLvl2 = (new Achievement("tradeLibrarianLvl2", 28, 2, Block.enchantmentTable, cureZombieVillager))
+		tradeButcherLvl5 = (new Achievement(0, "tradeButcherLvl5", 31, 2, new ItemStack(FCBetterThanWolves.fcAestheticOpaque, 1, FCBlockAestheticOpaque.m_iSubtypeChoppingBlockDirty), tradeButcherLvl4))
+				.registerAchievement(tabBTW)
+				.setSpecial();	
+				
+		tradeLibrarianLvl2 = (new Achievement("tradeLibrarianLvl2", 28, 3, Block.enchantmentTable, cureZombieVillager))
 				.registerAchievement(tabBTW);
 		
-		tradeLibrarianLvl3 = (new Achievement("tradeLibrarianLvl3", 29, 2, FCBetterThanWolves.fcBlockArcaneVessel, tradeLibrarianLvl2))
+		tradeLibrarianLvl3 = (new Achievement("tradeLibrarianLvl3", 29, 3, FCBetterThanWolves.fcBlockArcaneVessel, tradeLibrarianLvl2))
 				.registerAchievement(tabBTW);
 		
-		tradeLibrarianLvl4 = (new Achievement("tradeLibrarianLvl4", 30, 2, Block.skull, tradeLibrarianLvl3))
+		tradeLibrarianLvl4 = (new Achievement("tradeLibrarianLvl4", 30, 3, Block.skull, tradeLibrarianLvl3))
 				.registerAchievement(tabBTW);
 		
-		tradeLibrarianLvl5 = (new Achievement("tradeLibrarianLvl5", 31, 2, FCBetterThanWolves.fcInfernalEnchanter, tradeLibrarianLvl4))
+		tradeLibrarianLvl5 = (new Achievement("tradeLibrarianLvl5", 31, 3, FCBetterThanWolves.fcInfernalEnchanter, tradeLibrarianLvl4))
+				.registerAchievement(tabBTW)
+				.setSpecial();
+		
+		
+		craftInfusedSkull = (new Achievement(0, "craftInfusedSkull", 30, 4, new ItemStack( Item.skull, 1, 5), tradeLibrarianLvl4))
 				.registerAchievement(tabBTW);
 		
-		craftInfusedSkull = (new Achievement("craftInfusedSkull", 30, 3, Block.skull, tradeLibrarianLvl4))
+		killWither = (new Achievement("killWither", 31, 4, Block.skull, craftInfusedSkull))
 				.registerAchievement(tabBTW);
 		
-		killWither = (new Achievement("killWither", 31, 3, Block.skull, craftInfusedSkull))
+		findNetherstar = (new Achievement("findNetherstar", 31, 5, Item.netherStar, killWither))
 				.registerAchievement(tabBTW);
 		
-		findNetherstar = (new Achievement("findNetherstar", 31, 4, Item.netherStar, killWither))
+		craftBeacon = (new Achievement("craftBeacon", 32, 5, Block.beacon, findNetherstar))
 				.registerAchievement(tabBTW);
 		
 		craftForge = (new Achievement("craftForge", 31, 6, FCBetterThanWolves.fcAnvil, findNetherstar, findDormantForge))
 				.registerAchievement(tabBTW);
 		
-		craftEye = (new Achievement("craftEye", 32, 0, Item.eyeOfEnder, tradeClericLvl5))
+		craftEye = (new Achievement("craftEye", 32, 1, Item.eyeOfEnder, tradePriestLvl5))
 				.registerAchievement(tabBTW);
 		
-		travelEnd = (new Achievement("travelEnd", 33, 0, Block.endPortalFrame, craftEye))
+		travelEnd = (new Achievement("travelEnd", 33, 1, Block.endPortalFrame, craftEye))
 				.registerAchievement(tabBTW);
 		
-		killDragon = (new Achievement("killDragon", 34, 0, Block.dragonEgg, travelEnd))
+		killDragon = (new Achievement("killDragon", 34, 1, Block.dragonEgg, travelEnd))
 				.registerAchievement(tabBTW);
 		
-		craftSteelIngot = (new Achievement("craftSteelIngot", 35, 0, FCBetterThanWolves.fcItemSteel, killDragon))
+		craftSteelIngot = (new Achievement("craftSteelIngot", 35, 1, FCBetterThanWolves.fcItemSteel, killDragon))
 				.registerAchievement(tabBTW);
 		
 		craftSteelTools = (new Achievement("craftSteelTools", 36, 0, FCBetterThanWolves.fcItemBattleAxe, craftSteelIngot))
 				.registerAchievement(tabBTW);
 		
-		craftSteelArmor = (new Achievement("craftSteelArmor", 36, 1, FCBetterThanWolves.fcItemPlateBreastPlate, craftSteelIngot))
+		craftSteelArmor = (new Achievement("craftSteelArmor", 36, 2, FCBetterThanWolves.fcItemPlateBreastPlate, craftSteelIngot))
 				.registerAchievement(tabBTW);
 		
 		craftInfernalEnchater = (new Achievement("craftInfernalEnchater", 36, -1, FCBetterThanWolves.fcInfernalEnchanter, craftSteelIngot))
 				.registerAchievement(tabBTW);
 		
+		steelBeacon = (new Achievement("steelBeacon", 37, 1, FCBetterThanWolves.fcSoulforgedSteelBlock, craftSteelIngot))
+				.registerAchievement(tabBTW)
+				.setSpecial();
+		
 		System.out.println("BTW Tab: " + tabBTW.size() + " achievements");
+		
+		
+		/* Fun */
+		
+		AchievementTab tabFun = new BAMAchievementTabFun("fun").setIcon(Item.cake);
+		
+		eatOysters = (new Achievement("eatOysters", 0, 0, FCBetterThanWolves.fcItemCreeperOysters,  null, null))
+				.registerAchievement(tabFun)
+				.setHidden();
+		
+		milkBucket = (new Achievement("milkBucket", 0, 2, Item.bucketMilk,  null, null))
+				.registerAchievement(tabFun)
+				.setHidden();
+
+		eatMysteryMeat = (new Achievement("eatMysteryMeat", 0, 4, FCBetterThanWolves.fcItemRawMysteryMeat,  null, null))
+				.registerAchievement(tabFun)
+				.setHidden();
+		
+		powerCake = (new Achievement("powerCake", 2, 0, Item.cake,  null, null))
+				.registerAchievement(tabFun)
+				.setHidden();
+		
+		cleanFarmer = (new Achievement("cleanFarmer", 2, 2, FCBetterThanWolves.fcItemSoap,  null, null))
+				.registerAchievement(tabFun)
+				.setHidden();
+
+		System.out.println("Fun Tab: " + tabFun.size() + " achievements");
 
 	}
+
+
+
 
 
 	private static int vPos(int vPos)

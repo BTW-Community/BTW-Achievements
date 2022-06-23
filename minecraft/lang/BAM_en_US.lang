@@ -318,6 +318,9 @@ achievement.craftForge.desc=
 achievement.craftBlockDispenser=
 achievement.craftBlockDispenser.desc=
 
+achievement.steelBeacon=
+achievement.steelBeacon.desc=Construct a tier 4 steel beacon
+
 achievementtab.fun=Secret Achievements
 
 achievement.eatOysters=Spicy Snack / Whatever it is, the taste is explosive / Better than Caviar
@@ -329,9 +332,19 @@ achievement.powerCake.desc=Power a cake
 achievement.cleanFarmer=Don´t drop it!
 achievement.cleanFarmer.desc=Sell soap to a dirty Farmer to clean him up
 
-# Possible secret achiements:
+achievement.milkBucket=MilkBucket%
+achievement.milkBucket.desc=Drink a bucket of milk
+
+achievement.eatMysteryMeat=Soylent Green
+achievement.eatMysteryMeat.desc=
+
+# achievement.eatStew=
+# achievement.eatStew.desc=
+
+# achievement.killBeast=
+# achievement.killBeast.desc=
+
+# Possible secret achievements:
 # Activate a tier 4 diamond / emerald / soulforge beacon. soulforge could also be the final achievement in main line
 # get a rare sheep mutation proc
 # toss the milk
-
-
