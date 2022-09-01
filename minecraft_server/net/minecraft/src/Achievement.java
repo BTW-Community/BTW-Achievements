@@ -20,7 +20,7 @@ public class Achievement extends StatBase
     public final int displayRow;
 
     /**
-     * Holds the parent achievements, that must be taken before this achievement is available.
+     * Holds the parent achievements, that must be taken before this achievement is avaiable.
      */
     public final Achievement parentAchievement;
     public final Achievement[] parentAchievements;
@@ -60,12 +60,6 @@ public class Achievement extends StatBase
      * Holds the description of the achievement, ready to be formatted and/or displayed.
      */
     private final String achievementDescription;
-
-    /**
-     * Holds a string formatter for the achievement, some of then needs extra dynamic info - like the key used to open
-     * the inventory.
-     */
-    private IStatStringFormat statStringFormatter;
 
     /**
      * Holds the ItemStack that will be used to draw the achievement into the GUI.
@@ -192,7 +186,7 @@ public class Achievement extends StatBase
     {
         super.registerStat();
         achievementtab.add(this);
-        this.tab = achievementtab;
+        tab = achievementtab;
         
         if (this.displayColumn < achievementtab.minDisplayColumn)
         {
@@ -214,40 +208,6 @@ public class Achievement extends StatBase
         	achievementtab.maxDisplayRow = this.displayRow;
         }
         return this;
-    }
-
-    /**
-     * Returns whether or not the StatBase-derived class is a statistic (running counter) or an achievement (one-shot).
-     */
-    public boolean isAchievement()
-    {
-        return true;
-    }
-
-    /**
-     * Returns the fully description of the achievement - ready to be displayed on screen.
-     */
-    public String getDescription()
-    {
-        return this.statStringFormatter != null ? this.statStringFormatter.formatString(StatCollector.translateToLocal(this.achievementDescription)) : StatCollector.translateToLocal(this.achievementDescription);
-    }
-
-    /**
-     * Defines a string formatter for the achievement.
-     */
-    public Achievement setStatStringFormatter(IStatStringFormat par1IStatStringFormat)
-    {
-        this.statStringFormatter = par1IStatStringFormat;
-        return this;
-    }
-
-    /**
-     * Special achievements have a 'spiked' (on normal texture pack) frame, special achievements are the hardest ones to
-     * achieve.
-     */
-    public boolean getSpecial()
-    {
-        return this.isSpecial;
     }
 
     /**
