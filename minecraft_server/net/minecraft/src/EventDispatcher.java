@@ -9,6 +9,8 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
+import btw.community.sockthing.EventType;
+
 
 public class EventDispatcher {
 	private static EventDispatcher instance;

@@ -1,7 +1,7 @@
 package net.minecraft.src;
 
 import net.minecraft.src.EventListener;
-import net.minecraft.src.EventType;
+import btw.community.sockthing.EventType;
 import net.minecraft.src.AchievementList;
 import net.minecraft.src.Block;
 import net.minecraft.src.Entity;

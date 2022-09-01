@@ -1,0 +1,17 @@
+package btw.community.sockthing;
+
+public enum EventType {
+	CRAFTED,
+	COOKED,
+	BREWED,
+	PICKUP,
+	KILLED,
+	PORTAL,
+	ENTITY_INTERACT,
+	CONVERTED_BLOCK,
+	DEATH,
+	TRADED,
+	CURED,
+	CONSUMED,
+	PROGRESSIVE_CRAFTING, //BAM: Added
+}
