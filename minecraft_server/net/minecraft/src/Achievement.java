@@ -5,6 +5,8 @@ import net.minecraft.src.AchievementsCore;
 public class Achievement extends StatBase
 {
 	static {
+		ServerCommandManager.registerAddonCommand(new BAMCommand());
+		
 		AchievementsCore.getInstance();
 		BetterAchievementsMod.getInstance();
 	}
@@ -66,6 +68,8 @@ public class Achievement extends StatBase
      */
     public final ItemStack theItemStack;
 
+    private static String achievementName;
+    
     /**
      * Special achievements have a 'spiked' (on normal texture pack) frame, special achievements are the hardest ones to
      * achieve.
@@ -75,21 +79,25 @@ public class Achievement extends StatBase
     public Achievement(String name, int displayColumn, int displayRow, Item item, Achievement... parentAchievements)
     {
         this(0, name, displayColumn, displayRow, new ItemStack(item), parentAchievements);
+        this.achievementName = name;
     }
 
     public Achievement(String name, int displayColumn, int displayRow, Block block, Achievement... parentAchievements)
     {
         this(0, name, displayColumn, displayRow, new ItemStack(block), parentAchievements);
+        this.achievementName = name;
     }
 
     public Achievement(int par1, String par2Str, int par3, int par4, Item par5Item, Achievement... parentAchievements)
     {
         this(par1, par2Str, par3, par4, new ItemStack(par5Item), parentAchievements);
+        this.achievementName = par2Str;
     }
 
     public Achievement(int par1, String par2Str, int par3, int par4, Block par5Block, Achievement... parentAchievements)
     {
         this(par1, par2Str, par3, par4, new ItemStack(par5Block), parentAchievements);
+        this.achievementName = par2Str;
     }
 
     public Achievement(int id, String name, int displayColumn, int displayRow, ItemStack theItemStack, Achievement... parentAchievements)
@@ -102,6 +110,8 @@ public class Achievement extends StatBase
 
         this.parentAchievements = parentAchievements;
         this.parentAchievement = parentAchievements[0];
+        
+        this.achievementName = name;
     }
 
     /**
@@ -233,5 +243,14 @@ public class Achievement extends StatBase
     public StatBase initIndependentStat()
     {
         return this.setIndependent();
+    }
+
+	public String getName() {
+		return achievementName;
+	}
+
+    public boolean isAchievement()
+    {
+        return true;
     }
 }

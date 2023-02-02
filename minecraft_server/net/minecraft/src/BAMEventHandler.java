@@ -277,6 +277,11 @@ public class BAMEventHandler {
 	@EventListener(EventType.PICKUP)
 	public void onPickup(EntityPlayer player, ItemStack itemstack)
 	{
+		int id = itemstack.itemID;
+		Block block = Block.blocksList[id];
+		
+		ItemStack heldStack = player.getHeldItem();
+		
 		if (itemstack.itemID == Item.reed.itemID) {
             player.triggerAchievement(BAMAchievements.findReeds);
             return;
@@ -301,7 +306,8 @@ public class BAMEventHandler {
             player.triggerAchievement(BAMAchievements.dryBricks);
             return;
         }
-		else if (itemstack.itemID == Block.wood.blockID) {
+		else if (heldStack.itemID == FCBetterThanWolves.fcItemChiselIron.itemID || heldStack.itemID == FCBetterThanWolves.fcItemChiselDiamond.itemID
+				&& block instanceof FCBlockLog ) {
             player.triggerAchievement(BAMAchievements.findWood);
             return;
         }

@@ -1,5 +1,9 @@
 package net.minecraft.src;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 public class BAMAchievements {
 	
 	/* List of custom achievements */
@@ -147,8 +151,14 @@ public class BAMAchievements {
 	public static Achievement milkBucket;
 	public static Achievement eatMysteryMeat;
 	
+	private static AchievementTab tabBTW = new AchievementTab("btw").setIcon(FCBetterThanWolves.fcCompanionCube);
+	private static AchievementTab tabFun = new BAMAchievementTabFun("fun").setIcon(Item.cake);
+	
+	private static ArrayList btwlist = new ArrayList();
 	
 	public static void initialize() {
+		
+		
 		
 		/*
 		 * DO NOT set any achievement to independent (i.e. don't call .setIndependent())
@@ -159,7 +169,7 @@ public class BAMAchievements {
 		
 		/* Better Than Wolves - Tech Tree */
 		
-		AchievementTab tabBTW = new AchievementTab("btw").setIcon(FCBetterThanWolves.fcCompanionCube);
+		
 
 		/* Reed branch */
 		
@@ -509,9 +519,7 @@ public class BAMAchievements {
 		
 		
 		/* Fun */
-		
-		AchievementTab tabFun = new BAMAchievementTabFun("fun").setIcon(Item.cake);
-		
+				
 		eatOysters = (new Achievement("eatOysters", 0, 0, FCBetterThanWolves.fcItemCreeperOysters,  null, null))
 				.registerAchievement(tabFun)
 				.setHidden();
@@ -519,6 +527,8 @@ public class BAMAchievements {
 		milkBucket = (new Achievement("milkBucket", 0, 2, Item.bucketMilk,  null, null))
 				.registerAchievement(tabFun)
 				.setHidden();
+		
+		btwlist.add(milkBucket);
 
 		eatMysteryMeat = (new Achievement("eatMysteryMeat", 0, 4, FCBetterThanWolves.fcItemRawMysteryMeat,  null, null))
 				.registerAchievement(tabFun)
@@ -536,7 +546,38 @@ public class BAMAchievements {
 
 	}
 
+	
+	
+	public static Achievement getAchievement(String name)
+	{			
+		for (Achievement achievement : tabBTW.achievementList) {
 
+			System.out.println("BTW " + achievement.getName());
+			
+			String inputName = name;
+			String achievementName = achievement.getName();
+			
+			if (inputName.equalsIgnoreCase(achievementName))
+			{		
+				return achievement;
+			}
+		}
+		
+		for (Achievement achievement : tabFun.achievementList) {
+
+			System.out.println("Fun " + achievement.getName());
+			
+			String inputName = name;
+			String achievementName = achievement.getName();
+			
+			if (inputName.equalsIgnoreCase(achievementName))
+			{
+				return achievement;
+			}
+		}
+		
+		return null;
+	}
 
 
 
@@ -549,7 +590,6 @@ public class BAMAchievements {
 	private static int hPos(int hPos)
 	{
 		return hPos * 2;
-	}
-	
+	}	
 
 }
