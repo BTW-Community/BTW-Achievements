@@ -34,6 +34,10 @@ public class BAMEventHandler {
             player.triggerAchievement(BAMAchievements.craftBasket);
             return;
         }
+		else if (itemstack.itemID == FCBetterThanWolves.fcItemClubWood.itemID) {
+            player.triggerAchievement(BAMAchievements.craftWoodClub);
+            return;
+        }
 		else if (itemstack.itemID == FCBetterThanWolves.fcItemClubBone.itemID) {
             player.triggerAchievement(BAMAchievements.craftBoneClub);
             return;
@@ -486,14 +490,73 @@ public class BAMEventHandler {
 			player.triggerAchievement(BAMAchievements.tradeButcherLvl4);
 			return;
 		}
+		else if (recipe.getItemToBuy().itemID == FCBetterThanWolves.fcBBQ.blockID )
+		{
+			player.triggerAchievement(BAMAchievements.tradeBlacksmithLvl2);
+			return;
+		}
+		else if (recipe.getItemToBuy().itemID == FCBetterThanWolves.fcBellows.blockID )
+		{
+			player.triggerAchievement(BAMAchievements.tradeBlacksmithLvl3);
+			return;
+		}
+		else if (recipe.getItemToBuy().itemID == FCBetterThanWolves.fcCrucible.blockID)
+		{
+			player.triggerAchievement(BAMAchievements.tradeBlacksmithLvl4);
+			return;
+		}
+		else if (recipe.getItemToBuy().itemID == FCBetterThanWolves.fcItemSteel.itemID)
+		{
+			player.triggerAchievement(BAMAchievements.tradeBlacksmithLvl5);
+			return;
+		}
+		else if (recipe.getItemToBuy().itemID == Block.enchantmentTable.blockID)
+		{
+			player.triggerAchievement(BAMAchievements.tradePriestLvl2);
+			return;
+		}
+		else if (recipe.getItemToBuy().itemID == FCBetterThanWolves.fcBlockArcaneVessel.blockID)
+		{
+			player.triggerAchievement(BAMAchievements.tradePriestLvl3);
+			return;
+		}
+		else if (recipe.getItemToBuy().itemID == Item.skull.itemID && recipe.getItemToBuy().getItemDamage() == 1) //Runed Skull
+		{
+			player.triggerAchievement(BAMAchievements.tradePriestLvl4);
+			return;
+		}
+		else if (recipe.getItemToBuy().itemID == FCBetterThanWolves.fcInfernalEnchanter.blockID)
+		{
+			player.triggerAchievement(BAMAchievements.tradePriestLvl5);
+			return;
+		}
+		else if (recipe.getItemToBuy().itemID == Item.enchantedBook.itemID)
+		{
+			player.triggerAchievement(BAMAchievements.tradeLibrarianLvl2);
+			return;
+		}
+		else if (recipe.getItemToBuy().itemID == Block.brewingStand.blockID)
+		{
+			player.triggerAchievement(BAMAchievements.tradeLibrarianLvl3);
+			return;
+		}
+		else if (recipe.getItemToBuy().itemID == FCBetterThanWolves.fcBlockDispenser.blockID)
+		{
+			player.triggerAchievement(BAMAchievements.tradeLibrarianLvl4);
+			return;
+		}
+		else if (recipe.getItemToBuy().itemID == FCBetterThanWolves.fcItemEnderSpectacles.itemID)
+		{
+			player.triggerAchievement(BAMAchievements.tradeLibrarianLvl5);
+			return;
+		}
 		else if (recipe.getItemToBuy().itemID == FCBetterThanWolves.fcAestheticOpaque.blockID &&
 				recipe.getItemToBuy().getItemDamage() ==  FCBlockAestheticOpaque.m_iSubtypeChoppingBlockDirty)
 		{
 			player.triggerAchievement(BAMAchievements.tradeButcherLvl5);
 			return;
 		}
-		else if (recipe.getItemToSell().itemID == Item.skull.itemID &&
-				recipe.getItemToSell().getItemDamage() == 5)
+		else if (recipe.getItemToSell().itemID == Item.skull.itemID && recipe.getItemToSell().getItemDamage() == 5) //Infused Skull
 		{
 			player.triggerAchievement(BAMAchievements.craftInfusedSkull);
 			return;

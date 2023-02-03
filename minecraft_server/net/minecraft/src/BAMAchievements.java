@@ -393,12 +393,10 @@ public class BAMAchievements {
 		craftWaterwheel = (new Achievement("craftWaterwheel", 26, 5, FCBetterThanWolves.fcItemWaterWheel, craftHibachi))
 				.registerAchievement(tabBTW);
 		
-		//need to replace the displayed item, but enchanted items break the gui
-		craftSoulUrn = (new Achievement("craftSoulUrn", 26, 1, FCBetterThanWolves.fcItemUrn, cookUrn, craftGroundNetherrack, craftHopper))
+		craftSoulUrn = (new Achievement("craftSoulUrn", 26, 1, FCBetterThanWolves.fcItemSoulUrn, cookUrn, craftGroundNetherrack, craftHopper))
 				.registerAchievement(tabBTW);
 		
 		cureZombieVillager = (new Achievement("cureZombieVillager", 27, 1, Item.emerald, craftSoulUrn))
-//		cureZombieVillager = (new Achievement("cureZombieVillager", 27, 1, Item.emerald, null, null))
 				.registerAchievement(tabBTW);
 		
 		/* Trades */
