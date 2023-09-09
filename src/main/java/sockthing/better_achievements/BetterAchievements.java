@@ -3,8 +3,6 @@ package sockthing.better_achievements;
 import btw.AddonHandler;
 import btw.BTWAddon;
 
-import btw.block.BTWBlocks;
-import issame.achievements_core.achievements.AchievementTab;
 
 public class BetterAchievements extends BTWAddon {
     private BetterAchievements() {
