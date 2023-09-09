@@ -1,0 +1,354 @@
+achievementtab.btw=BTW Achievements
+
+achievement.findReeds=Do you know how to Reed?
+achievement.findReeds.desc=Reeds grow near water in warm climates
+
+achievement.craftWicker=Weave me alone!
+achievement.craftWicker.desc=Craft some Reeds together
+
+achievement.craftBasket=Weave right now!
+achievement.craftBasket.desc=Craft some Wicker together
+
+achievement.findBones=Get Boned!
+achievement.findBones.desc=Find some Bones
+
+achievement.craftBoneClub=Let's go Clubbing!
+achievement.craftBoneClub.desc=One plus one equals SMASH
+
+achievement.craftBoneHook=Caipt'n Hook
+achievement.craftBoneHook.desc=Break down a Bone
+
+achievement.baitFishingRod=Fishy Business
+achievement.baitFishingRod.desc=Bait a Fishing Rod
+
+achievement.findShaft=You got shafted!
+achievement.findShaft.desc=Just keep punching that tree!
+
+achievement.craftWoodClub=My first weapon
+achievement.craftWoodClub.desc=Two shafts make a big one
+
+achievement.craftFirePlow=Rub them hard, rub them good!
+achievement.craftFirePlow.desc=Craft some Shafts together
+
+achievement.craftCampfire=BBQ time!
+achievement.craftCampfire.desc=Craft more Shafts together
+
+achievement.cookMeat=What's cooking doc?
+achievement.cookMeat.desc=Roast meat on a Campfire or Oven
+
+achievement.craftPointyStick=Don't poke your eyes out!
+achievement.craftPointyStick.desc=Sharpen your Shaft
+
+achievement.craftKnittingNeedles=Granny mode unlocked!
+achievement.craftKnittingNeedles.desc=It all starts with two sharp pointy Sticks
+
+achievement.craftWoolArmor=Better Than Socks
+achievement.craftWoolArmor.desc=It takes two balls of Wool to start knitting
+
+achievement.craftSharpStone=I guess this mines something?
+achievement.craftSharpStone.desc=Sharpen your Stone
+
+achievement.findString=A sticky situation!
+achievement.findString.desc=Spiders are your friends
+
+achievement.craftBowDrill=Rub them, just like you should!
+achievement.craftBowDrill.desc=A string would really help firing things up
+
+achievement.craftStoneAxe=I wanted to Axe you something
+achievement.craftStoneAxe.desc=Use a string to tie stones to a stick
+
+achievement.findWood=Finally some logs
+achievement.findWood.desc=Use an axe to chop down a tree
+
+achievement.craftStoneShovel=Everyday I'm shovelin
+achievement.craftStoneShovel.desc=Use a string to tie stones to a stick
+
+achievement.dryBricks=Sunbaked Clay Cookies
+achievement.dryBricks.desc=Shape clay into bricks and let them dry in the sun
+
+achievement.findIronChunk=Acquire Hardware
+achievement.findIronChunk.desc=Craft multiple dust together to form a chunk to melt
+
+achievement.craftOven=No more BBQ?
+achievement.craftOven.desc=Construct a Brick Oven out of brick slabs
+
+achievement.cookIron=Is that all??
+achievement.cookIron.desc=Smelt an iron chunk
+
+achievement.craftIronChisel=My first iron tool!
+achievement.craftIronChisel.desc=Craft iron nuggets into a chisel
+
+achievement.findStoneBrick=A Squared one
+achievement.findStoneBrick.desc=Use an iron chisel to carve out stone
+
+achievement.craftWorkbench=Benchmarking
+achievement.craftWorkbench.desc=Create a Workbench by converting a stump
+
+achievement.craftStonePick=Time to Mine!
+achievement.craftStonePick.desc=Make a stone pickaxe using string
+
+achievement.craftIronIngot=Actual hardware Aquired!
+achievement.craftIronIngot.desc=Craft nuggets into an ingot
+
+achievement.craftIronPick=Isn't It Iron Pick
+achievement.craftIronPick.desc=Iron tools don't require string
+
+achievement.craftIronSword=Iron pointy stick
+achievement.craftIronSword.desc=Use iron and shafts to make a sword
+
+achievement.craftIronHoe=Time to Farm!
+achievement.craftIronHoe.desc=A really long shaft with a bit of iron on the side
+
+achievement.craftShears=Snip!
+achievement.craftShears.desc=Use Iron Ingots to make a shears
+
+achievement.craftCauldron=Chef de Cuisine
+achievement.craftCauldron.desc=Lots of iron, a bucket and... a bone?
+
+achievement.craftIronAxe=Axe about Carpentry
+achievement.craftIronAxe.desc=Use iron and shafts to make an axe
+
+achievement.craftIronArmor=Suit Up
+achievement.craftIronArmor.desc=Protect yourself with a piece of iron armor
+
+achievement.findDung=Eww!
+achievement.findDung.desc=Wolves are so useful!
+
+achievement.craftScouredLeather=Leather grind
+achievement.craftScouredLeather.desc=Grind Leather in a millstone
+
+achievement.craftTannedLeather=Leather cook
+achievement.craftTannedLeather.desc=Cook Scoured Leather with bark and dung
+
+achievement.craftSaw=Master Carpenter
+achievement.craftSaw.desc=A belt, gears and iron ingots make a Saw
+
+achievement.craftBellows=Blow me away
+achievement.craftBellows.desc=Use Sidings and Tanned Leather to craft Bellows
+
+achievement.craftTurntable=You turn me right round baby
+achievement.craftTurntable.desc=Use a clock to craft a Turntable
+
+achievement.craftPottery=Pothead
+achievement.craftPottery.desc=Turn clay on a Turntable into a piece of pottery
+
+achievement.craftHopper=Hop in that
+achievement.craftHopper.desc=Combine a pressure plate, some wood pieces and gears to craft a Hopper
+
+achievement.craftPlanks=Plank you very much
+achievement.craftPlanks.desc=Use an iron axe with a log to get actual planks!
+
+achievement.craftHamper=Weave it all to me
+achievement.craftHamper.desc=Need some supporting wood if you want bigger boxes
+
+achievement.craftGear=Gearing up
+achievement.craftGear.desc=Shafts and wood could make some makeshift gear
+
+achievement.craftHandCrank=Cranky business
+achievement.craftHandCrank.desc=Craft a Hand Crank
+
+achievement.craftMillstone=Time to Grind!
+achievement.craftMillstone.desc=Craft a Millstone
+
+achievement.findHempSeeds=A not so Seedy Place
+achievement.findHempSeeds.desc=Find hemp seeds by tilling grass
+
+achievement.harvestHemp=Better living through Hemp
+achievement.harvestHemp.desc=Use shears to harvest Hemp
+
+achievement.craftHempFibers=High-Fiber Content
+achievement.craftHempFibers.desc=Grind Hemp in a Millstone
+
+achievement.craftAxle=Power Move
+achievement.craftAxle.desc=Use Rope and Planks to craft an Axle
+
+achievement.craftGearBox=Redirecting Power
+achievement.craftGearBox.desc=Use an Axle and Planks to craft a Gear Box
+
+achievement.craftFabric=What's Forge?
+achievement.craftFabric.desc=Combine Fibers to craft a piece of Fabric
+
+achievement.craftWindmill=You spin my head right round
+achievement.craftWindmill.desc=Craft a Windmill with 4 Sails
+
+achievement.craftPadding=Paddington Bear
+achievement.craftPadding.desc=Wool and Fabric make a soft cushioning material
+
+achievement.findDiamonds=DIAMONDS!
+achievement.findDiamonds.desc=Acquire diamonds with your iron tools
+
+achievement.craftDiamondIngot=Shiny Ingot!
+achievement.craftDiamondIngot.desc=Mix a Diamond with an Iron Ingot and Creeper Oysters
+
+achievement.findCreeperOysters=Deez nuts
+achievement.findCreeperOysters.desc=*Snip snip*
+
+achievement.craftDiamondArmor=Cover Me with Diamonds
+achievement.craftDiamondArmor.desc=Diamond armor saves lives
+
+achievement.craftDiamondPick=Renewable tools!
+achievement.craftDiamondPick.desc=Diamond tools are 100% renewable
+
+achievement.findObsidian=Ice Bucket Challenge
+achievement.findObsidian.desc=Obtain a block of obsidian
+
+achievement.travelNether=Welkom in Nederland
+achievement.travelNether.desc=Travel to the Nether
+
+achievement.findDormantForge=Sleeping Treasure
+achievement.findDormantForge.desc=Locate a Dormant Forge in a Nether Fortress
+
+achievement.findBlazeRod=Into Fire
+achievement.findBlazeRod.desc=Relieve a Blaze of its rod
+
+achievement.craftGroundNetherrack=It's getting dizzy!
+achievement.craftGroundNetherrack.desc=Grind up some Netherrack
+
+achievement.craftHibachi=Fire on Demand
+achievement.craftHibachi.desc=Craft a Hibachi
+
+achievement.cookUrn=Urning your keep
+achievement.cookUrn.desc=Cook an unfired Clay Urn in a kiln
+
+achievement.cookCrucible=I'm so stoked!
+achievement.cookCrucible.desc=Cook an unfired Crucible in a kiln
+
+achievement.craftWaterwheel=Water Power!
+achievement.craftWaterwheel.desc=Use some glue to stick some wood together
+
+achievement.craftSoulUrn=Bottles up!
+achievement.craftSoulUrn.desc=Capture Souls in an Urn
+
+achievement.cureZombieVillager=Zombie Doctor
+achievement.cureZombieVillager.desc=Cure a Zombie Villager
+
+achievement.tradeFarmerLvl2=Apprentice Farmer
+achievement.tradeFarmerLvl2.desc=Sell an Iron Hoe
+
+achievement.tradeFarmerLvl3=Journeyman Farmer
+achievement.tradeFarmerLvl3.desc=Sell a Millstone
+
+achievement.tradeFarmerLvl4=Expert Farmer
+achievement.tradeFarmerLvl4.desc=Sell a Water Wheel
+
+achievement.tradeFarmerLvl5=Master Farmer
+achievement.tradeFarmerLvl5.desc=Sell some Planters to fully max out a Farmer
+
+achievement.tradeButcherLvl2=Apprentice Butcher
+achievement.tradeButcherLvl2.desc=Sell a Cauldron
+
+achievement.tradeButcherLvl3=Journeyman Butcher
+achievement.tradeButcherLvl3.desc=Sell a Saw
+
+achievement.tradeButcherLvl4=Expert Butcher
+achievement.tradeButcherLvl4.desc=Sell a Breeding Harness
+
+achievement.tradeButcherLvl5=Master Butcher
+achievement.tradeButcherLvl5.desc=Sell a Bloody Chopping Block to fully max out a Butcher
+
+achievement.tradeBlacksmithLvl2=Apprentice Blacksmith
+achievement.tradeBlacksmithLvl2.desc=Sell a Hibachi
+
+achievement.tradeBlacksmithLvl3=Journeyman Blacksmith
+achievement.tradeBlacksmithLvl3.desc=Sell a Bellow
+
+achievement.tradeBlacksmithLvl4=Expert Blacksmith
+achievement.tradeBlacksmithLvl4.desc=Sell a Crucible
+
+achievement.tradeBlacksmithLvl5=Master Blacksmith
+achievement.tradeBlacksmithLvl5.desc=Sell some Soulforged Steel to fully max out a Blacksmith
+
+achievement.tradePriestLvl2=Apprentice Priest
+achievement.tradePriestLvl2.desc=Sell an Ancient Manuscript
+
+achievement.tradePriestLvl3=Journeyman Priest
+achievement.tradePriestLvl3.desc=Sell a Brewing Stand
+
+achievement.tradePriestLvl4=Expert Priest
+achievement.tradePriestLvl4.desc=Sell a Block Dispenser
+
+achievement.tradePriestLvl5=High Priest
+achievement.tradePriestLvl5.desc=Sell some Ender Spectacles to fully max out a Priest
+
+achievement.tradeLibrarianLvl2=Apprentice Librarian
+achievement.tradeLibrarianLvl2.desc=Sell an Enchanting Table
+
+achievement.tradeLibrarianLvl3=Journeyman Librarian
+achievement.tradeLibrarianLvl3.desc=Sell a Vessel of the Dragon
+
+achievement.tradeLibrarianLvl4=Expert Librarian
+achievement.tradeLibrarianLvl4.desc=Sell a Runed Skull
+
+achievement.tradeLibrarianLvl5=Master Librarian
+achievement.tradeLibrarianLvl5.desc=Sell an Infernal Enchanter to fully max out a Librarian
+
+achievement.craftEye=The all seeing Eye
+achievement.craftEye.desc=Trade Ender Pearls for Eyes of Ender
+
+achievement.travelEnd=The End?
+achievement.travelEnd.desc=Or the beginning?
+
+achievement.killDragon=Free the End
+achievement.killDragon.desc=Defeat the Ender Dragon
+
+achievement.craftSteelIngot=Tougher Than Diamonds
+achievement.craftSteelIngot.desc=Created by capturing poor souls in a iron ingot
+
+achievement.craftSteelTools=Refined Tools!
+achievement.craftSteelTools.desc=Crafted in the Soulforge
+
+achievement.craftSteelArmor=Try and hurt me now!
+achievement.craftSteelArmor.desc=Soulforged Steel and Steel Armor Plate make some tough Armor
+
+achievement.craftInfernalEnchater=Scroll Master
+achievement.craftInfernalEnchater.desc=Use Steel to upgrade your Enchantment Table
+
+achievement.craftInfusedSkull=The eyes are glowing!
+achievement.craftInfusedSkull.desc=Trade a Runed Skull with the Priest
+
+achievement.killWither=The Beginning.
+achievement.killWither.desc=Kill the Wither
+
+achievement.findNetherstar=Twinkle, twinkle, Little Star!
+achievement.findNetherstar.desc=Dropped by the Wither
+
+achievement.craftBeacon=It's Show Time!
+achievement.craftBeacon.desc=Construct a Beacon
+
+achievement.craftForge=Anvil with Soul
+achievement.craftForge.desc=Awaken a Dormant Forge with a Nether Star and Soul Flux
+
+achievement.craftBlockDispenser=Suck it up!
+achievement.craftBlockDispenser.desc=Crafted with Mossy Cobble and Soul Urns
+
+achievement.steelBeacon=Mom, I did it!
+achievement.steelBeacon.desc=Construct a tier 4 steel beacon
+
+achievementtab.fun=Secret Achievements
+
+achievement.eatOysters=Spicy Snack
+achievement.eatOysters.name=Eat some Creeper Oysters
+# Whatever it is, the taste is explosive / Better than Caviar
+
+# achievement.powerCake=The Lie
+# achievement.powerCake.desc=Power a cake
+
+achievement.cleanFarmer=Don't drop it!
+achievement.cleanFarmer.desc=Sell soap to a dirty Farmer to clean him up
+
+achievement.milkBucket=MilkBucket%
+achievement.milkBucket.desc=Drink a bucket of milk
+
+achievement.eatMysteryMeat=Soylent Green
+achievement.eatMysteryMeat.desc="You tell everybody. Listen to me Hatcher! You've gotta tell 'em!"
+
+# achievement.eatStew=
+# achievement.eatStew.desc=
+
+# achievement.killBeast=
+# achievement.killBeast.desc=
+
+# Possible secret achievements:
+# Activate a tier 4 diamond / emerald / soulforge beacon. soulforge could also be the final achievement in main line
+# get a rare sheep mutation proc
+# toss the milk
